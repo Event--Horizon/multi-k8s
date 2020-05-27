@@ -5,8 +5,8 @@ docker push eventh0riz0n/multi-client:latest
 docker push eventh0riz0n/multi-client:$SHA
 docker push eventh0riz0n/multi-server:latest
 docker push eventh0riz0n/multi-server:$SHA
-docker push eventh0riz0n/multi-workers:latest
-docker push eventh0riz0n/multi-workers:$SHA
+docker push eventh0riz0n/multi-worker:latest
+docker push eventh0riz0n/multi-worker:$SHA
 kubectl apply -f k8s
 kubectl set image deployments/server-deployments server=eventh0riz0n/multi-server:$SHA
 kubectl set image deployments/client-deployments client=eventh0riz0n/multi-client:$SHA
